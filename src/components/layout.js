@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import NavBar from './navigation/navbar';
 import Footer from './footer';
@@ -11,8 +11,6 @@ import "../style/layout.css";
 const Layout = ({ children }) => {
     const [dark, setDark] = useState("dark");
     const [datasetTheme, setDatasetTheme] = useState();
-
-    const loggedIn = useRef(false);
 
 
     //initialization
@@ -28,7 +26,7 @@ const Layout = ({ children }) => {
 
     return(
         <div className="layout" className="d-flex flex-column justify-content-between">
-            <NavBar dark={dark} setDark={bool => setDark(not(dark))} />
+            <NavBar dark={dark} setDark={() => setDark(not(dark))} />
             <div className="layout-content mx-auto p-4">
                 { children }
             </div>

@@ -8,7 +8,7 @@ const NavBarLinkList = (props) => {
             <ul className="list-unstyled navbar-link-list d-none d-lg-inline-flex flex-row p-0 m-0">
                 {
                     props.links ? props.links.map((value, index) => {
-                        return <NavBarLink id={`navbarlink-${index}`} to={`/${value === "Home" ? "" : value.replace(/\s/g, '')}`} styling={props.linkStyling} title={value} />
+                        return <NavBarLink key={`navbarlink-${index}`} to={`/${value === "Home" ? "" : value.replace(/\s/g, '')}`} styling={props.linkStyling} title={value} />
                     }) : <div />
                 }
             </ul>

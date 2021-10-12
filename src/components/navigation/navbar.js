@@ -1,5 +1,4 @@
 import React from 'react';
-import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap';
 
 import not from '../../functions/not';
 import NavBarBrand from './navbar/navbar-brand';
